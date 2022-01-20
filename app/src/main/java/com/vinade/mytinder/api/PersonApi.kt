@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface PersonApi {
 
-    @GET
+    @GET("api")
     suspend fun getPerson(): Response<Person>
 }
