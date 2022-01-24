@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartFragment">
+    tools:context=".view.StartFragment">
 
 
     <TextView
@@ -20,9 +20,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.chip.Chip
-        android:id="@+id/chip"
+        android:id="@+id/chip_male"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Chip.Choice"
         app:chipStartPadding="15dp"
         app:chipEndPadding="15dp"
         android:layout_marginStart="64dp"
@@ -32,9 +33,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <com.google.android.material.chip.Chip
-        android:id="@+id/chip2"
+        android:id="@+id/chip_female"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Chip.Choice"
         app:chipStartPadding="15dp"
         app:chipEndPadding="15dp"
         android:layout_marginTop="32dp"
