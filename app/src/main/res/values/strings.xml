@@ -5,8 +5,8 @@
     <string name="choose_your_gender">Choose your gender</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
-    <string name="country">Country: %d</string>
-    <string name="gender">Gender:  %d</string>
-    <string name="city">City: %d</string>
-    <string name="age">Age: %d</string>
+    <string name="country">Country: %s</string>
+    <string name="gender">Gender:  %s</string>
+    <string name="city">City: %s</string>
+    <string name="age">Age: %s</string>
 </resources>
