@@ -2,6 +2,7 @@ package com.vinade.mytinder.api
 
 import com.vinade.mytinder.model.Person
 import com.vinade.mytinder.model.Sentences
+import com.vinade.mytinder.utils.NetworkResult
 import retrofit2.Response
 import retrofit2.http.GET
 
