@@ -33,29 +33,19 @@ class MainActivity : AppCompatActivity(), Navigator{
         viewModel = ViewModelProvider(this, ViewModelFactory(repository)).get(PersonViewModel::class.java)
         if(savedInstanceState == null){
             supportFragmentManager.commit {
-
                 add(R.id.fragment_container, StartFragment())
-                Log.d("test", "supportFragmentManager")
             }
         }
 
 
-//        val nameObserver = Observer<Person>{
-//            refreshFragment(PersonFragment())
-//        }
-
-//        viewModel.person.observe(this, {
-//            refreshFragment(PersonFragment())
-//    })
+        viewModel.loading.observe(this, {
+            val btn = binding.btnLike
+            btn.isEnabled = !it
+        })
 
         binding.btnGo.setOnClickListener {
             showButtons()
             refreshFragment(PersonFragment())
-//            viewModel.person.observe(this, nameObserver)
-//            supportFragmentManager.commit {
-//                replace(R.id.fragment_container, PersonFragment())
-//                viewModel.getRandomPerson()
-//            }
 
         }
         binding.btnLike.setOnClickListener {
@@ -65,7 +55,8 @@ class MainActivity : AppCompatActivity(), Navigator{
 
     }
 
-    fun refreshFragment(fragment: Fragment){
+
+    private fun refreshFragment(fragment: Fragment){
         supportFragmentManager.commit {
             replace(R.id.fragment_container, fragment)}
     }
@@ -96,10 +87,4 @@ class MainActivity : AppCompatActivity(), Navigator{
 
     }
 
-
-
-//    fun passData(com: FragmentComunicator){
-//        comunicator = com
-//        comunicator.passResult(result)
-//    }
 }
